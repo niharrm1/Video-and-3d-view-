@@ -1,0 +1,106 @@
+.multi-video-player {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.video-row {
+  display: flex;
+  margin-bottom: 20px;
+  width: 100%; /* Ensure the row takes full width */
+  flex-wrap: wrap; /* Allow wrapping to next line */
+}
+
+.video-player {
+  margin-bottom: 20px; /* Add some margin at the bottom */
+  cursor: pointer; /* Add pointer cursor */
+  flex: 1; /* Ensure all video players take equal space */
+}
+
+.video-player video {
+  width: 100%; /* Make the video player full-width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Add some border radius */
+  outline: none; /* Remove default focus outline */
+  transition: width 0.3s; /* Add transition for smooth animation */
+}
+
+.video-player.selected {
+  width: 100%; /* Make the selected video take full width */
+}
+
+.video-player.half-width {
+  width: 50%; /* Other videos take half width */
+}
+
+.controls {
+  position: relative;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  background-color: #27282A;
+  height: 46px;
+  width: 933px;
+  margin-left: -20px;
+}
+
+.stream-button {
+  padding: 10px 20px; /* Adjust padding */
+  background-color: #007bff; /* Button background color */
+  color: white; /* Button text color */
+  border: none; /* Remove button border */
+  border-radius: 5px; /* Add border radius */
+  margin-left: 687px;
+}
+
+.logo-button {
+  padding: 5px; /* Adjust padding */
+  background-color: transparent; /* Transparent background */
+  border: none; /* Remove button border */
+  margin-right: 5px; /* Adjust margin between buttons */
+}
+
+.logo-button img {
+  width: 30px; /* Adjust logo image size */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.logo-buttons {
+  position: relative; /* Position the dot relative to the button */
+  padding: 0; /* Remove padding */
+  background: none; /* Remove background */
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  width: 30px;
+  height: 32px;
+  border-radius: 4px;
+  margin-left: 9px;
+}
+
+.logo-button::after {
+  content: ''; /* Add content */
+  position: absolute; /* Position the dot absolutely */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Center both horizontally and vertically */
+  width: 11px;
+  height: 12px;
+  background-color: red; /* Dot color */
+  border-radius: 50%; /* Make dot round */
+}
+
+.micro {
+  color: white;
+  margin-top: 5px;
+  margin-left: 9px;
+}
+
+.current-time{
+  color: white;
+   font-family: DM Sans;
+  font-weight: 700;
+  
+}
